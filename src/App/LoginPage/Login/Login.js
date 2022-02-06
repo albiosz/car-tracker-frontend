@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 import Button from '../../Button/Button';
 import Input from '../Input/Input';
@@ -13,6 +13,21 @@ export default function Login(props) {
         
         navigate("/map");
     }
+
+    useEffect(() => {
+        const listener = event => {
+          if (event.code === "Enter" || event.code === "NumpadEnter") {
+            // event.preventDefault();
+            if(props.submit !== null){
+                onSubmit(event)
+            }
+          }
+        };
+        document.addEventListener("keydown", listener);
+        return () => {
+          document.removeEventListener("keydown", listener);
+        };
+      }, [props.login, props.password]);
 
     return(
         <div className="Login-container">
