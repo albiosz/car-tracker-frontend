@@ -1,0 +1,81 @@
+.FormPage{
+    &-site{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    &-container{
+        min-width: 300px;
+        min-height: 454px;
+        border: 1px solid #A5A5A5;
+        border-radius: 11px;
+        padding: 30px 40px 30px 40px;
+    }
+}
+
+.FormPageLogo{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 80px 0px;
+    }
+
+    &-image{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-img{
+            max-width: 120px;
+        }
+    }
+
+    &-text{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-txt{
+            font-family: bold 1em Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: #636363;
+            margin: 15px;
+        }
+    }
+}
+
+.FormPageInput{
+    &-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.FormPageNext{
+    &-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+    }
+
+    &-addButton{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-backButton{
+        display: flex;
+        flex-direction: row;
+
+    }
+}

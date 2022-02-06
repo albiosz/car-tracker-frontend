@@ -1,0 +1,45 @@
+.Record{
+  &-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+  }
+
+  &-label{
+    &-p{
+      display: flex;
+      justify-content: left;
+      margin-bottom: 0;
+      color: #717171;
+    }
+  }
+
+  &-data{
+    &-container{
+      display: flex;
+      justify-content: left;
+    }
+
+    &-box{
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: bold 1em Arial, Helvetica, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+
+      border: 1px solid #A5A5A5;
+      border-radius: 11px;
+
+      color: #636363;
+      background-color: #FFFFFF;
+    }
+  }
+}

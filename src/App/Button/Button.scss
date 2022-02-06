@@ -1,0 +1,35 @@
+.Button{
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        width: 176px;
+        height: 35px;
+        margin: 6px;
+
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 24px;
+
+        background-color: #1976D2;
+    }
+
+    &-container:hover{
+        filter: brightness(1.2);
+        cursor: pointer;
+    }
+
+    &-subcontainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    &-text{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        color: #FFFFFF;
+        margin: 0;
+    }
+}

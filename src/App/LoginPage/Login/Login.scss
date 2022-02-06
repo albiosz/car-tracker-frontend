@@ -1,0 +1,102 @@
+.LoginLogo{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 80px 0px;
+    }
+
+    &-image{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-img{
+            max-width: 120px;
+        }
+    }
+
+    &-text{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-txt{
+            font-family: bold 1em Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: #636363;
+            margin: 15px;
+        }
+    }
+}
+
+.LoginInput{
+    &-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    &-link{
+        &-container{
+            display: flex;
+            justify-content: left;
+        }
+
+        &-p{
+            margin: 0;
+
+            &-a{
+                font-family: bold 1em Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                font-size: 13px;
+                color: #636363;
+                margin: 5px 5px 10px 5px;
+                width: fit-content;
+                text-decoration: underline solid;
+            }
+        }
+    }
+}
+
+.LoginNext{
+    &-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+    }
+
+    &-newAccount{
+        display: flex;
+        flex-direction: row;
+        justify-content: left; 
+        align-items: flex-start;
+    }
+
+    &-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &-text{
+        margin: 0;
+
+        &-a{
+            font-family: bold 1em Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            color: #636363;
+            margin: 5px 5px 10px 5px;
+            width: fit-content;
+            text-decoration: underline solid;
+        }
+    }
+}

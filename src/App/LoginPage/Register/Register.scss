@@ -1,0 +1,67 @@
+.RegisterLogo{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 80px 0px;
+    }
+
+    &-image{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-img{
+            max-width: 120px;
+        }
+    }
+
+    &-text{
+        &-container{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-txt{
+            font-family: bold 1em Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: #636363;
+            margin: 15px;
+        }
+    }
+}
+
+.RegisterInput{
+    &-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.RegisterNext{
+    &-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+    }
+
+    &-newAccount{
+        display: flex;
+        flex-direction: row;
+        justify-content: left; 
+        align-items: flex-start;
+    }
+
+    &-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}

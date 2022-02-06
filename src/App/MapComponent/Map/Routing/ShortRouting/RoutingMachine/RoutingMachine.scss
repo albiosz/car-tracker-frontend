@@ -1,0 +1,16 @@
+.leaflet-control-container .leaflet-routing-container-hide {
+  display: none
+}
+
+.my-div-icon {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  background: #444;
+  width: 26px;
+  height: 26px;
+  border-radius: 5px;
+  margin-top: -34px; /*Shift by arrow top+height*/
+  margin-left: -13px; /*Shift by half the marker width*/
+  display: none;
+}

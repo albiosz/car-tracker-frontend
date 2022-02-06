@@ -1,0 +1,47 @@
+.SelectIn{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.InputSelect{
+    &-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+    }
+
+    &-label{
+        &-container{
+            display: flex;
+            justify-content: left;
+        }
+
+        &-p{
+            font-family: bold 1em Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #636363;
+            margin: 10px 5px 10px 5px;
+        }
+    }
+
+    &-input{
+        &-container{
+            display: flex;
+            justify-content: left;
+        }
+
+        &-in{
+            @extend .SelectIn;
+        }
+
+        &-in div{
+            border-radius: 11px;
+        }
+
+        &-in:focus{
+            outline: none !important;
+        }
+    }
+}
