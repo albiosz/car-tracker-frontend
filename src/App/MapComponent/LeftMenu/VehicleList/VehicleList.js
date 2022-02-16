@@ -1,14 +1,13 @@
 import React from "react";
 import Entry from "./Entry/Entry";
-import store from "../../../../store/store"
+import store from "../../../../store/store";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import "./VehicleList.scss"
 
 class VehicleList extends React.Component {
 
   constructor(props) {
     super(props);
-    
-    this.renderEntries = this.renderEntries.bind(this);
 
     this.state = {
       ids: store.getState().vehicles.map(vehicle => {
@@ -18,8 +17,12 @@ class VehicleList extends React.Component {
         else{
           return null;
         }
-      })
+      }),
+      vehicles: store.getState().vehicles
     }
+
+    this.renderEntries = this.renderEntries.bind(this);
+    this.handleOnDragEnd = this.handleOnDragEnd.bind(this);
   }
 
   componentDidMount(){
@@ -42,7 +45,8 @@ class VehicleList extends React.Component {
         
         if (!equalArrays) {
           this.setState({
-            ids: newIds
+            ids: newIds,
+            vehicles: store.getState().vehicles
           })
         }
       }
@@ -54,17 +58,34 @@ class VehicleList extends React.Component {
     this.unsubscribe();
   }
 
+  handleOnDragEnd(result) {
+    const items = Array.from(this.state.vehicles);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    this.setState({
+      vehicles: items
+    })
+  }
+
   renderEntries() {
-    let vehicles = store.getState().vehicles;
-    if (vehicles.length > 0) {
+    if (this.state.vehicles.length > 0) {
       return (
-        store.getState().vehicles.map(vehicle => {
+        this.state.vehicles.map((vehicle, index) => {
           if (vehicle.displayEntry) {
             // TODO STORAGE data.state.vehicles.map(vehicle => {
-            return <Entry
-              key={vehicle.id}
-              id={vehicle.id}
-            />
+            return (
+              <Draggable key={vehicle.id} draggableId={String(vehicle.id)} index={index}>
+                {provided => (
+                  <div className="entryVehicleList" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                    <Entry
+                      key={vehicle.id}
+                      id={vehicle.id}
+                    />
+                  </div>
+                )}
+              </Draggable>
+            )
           }
           else {
             return null;
@@ -83,9 +104,16 @@ class VehicleList extends React.Component {
 
   render() {
     return (
-      <div className="vehiclesList" style={!this.props.display ? {display: 'none'} : {}}>
-        {this.renderEntries()}
-      </div>
+      <DragDropContext onDragEnd={this.handleOnDragEnd}>
+        <Droppable droppableId="vehicles">
+          {(provided) => (
+            <div className="vehiclesList" style={!this.props.display ? {display: 'none'} : {}} {...provided.droppableProps} ref={provided.innerRef}>
+              {this.renderEntries()}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
     )
   }
 
