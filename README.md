@@ -42,7 +42,7 @@ Short time history shows newest 35 locations points of a vehicle.
 #### Follow
 Functionality which allow user to follow a chosen vehicle, what means that view will be centered on the vehicle every time there is an update of location.
 <p align="center">
-  <img src="https://drive.google.com/uc?id=Plp6ETJVH21bA4QLRddIN34EywL0pg" alt="Follow"/> 
+  <img src="https://drive.google.com/uc?id=1_aPlp6ETJVH21bA4QLRddIN34EywL0pg" alt="Follow"/> 
 </p>
 
 #### Show More
