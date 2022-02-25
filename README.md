@@ -3,7 +3,7 @@
 This project is a frontend of service which was created for a bachelor thesis. The whole service allows a user to track vehicles.
 
 <p align="center">
-  <img src="https://drive.google.com/uc?id=10IMmolpQ4r1U04XHfmTZHQiao_gLDbiM" alt="Main screen"/> 
+  <img src="https://drive.google.com/uc?id=10IMmolpQ4r1U04XHfmTZHQiao_gLDbiM" width="600px" alt="Main screen"/> 
 </p>
 
 
@@ -48,7 +48,7 @@ Functionality which allow user to follow a chosen vehicle, what means that view 
 #### Show More
 Another screen which shows more details of a chosen vehicle.
 <p align="center">
-  <img src="https://drive.google.com/uc?id=1ddnpTgr6s_oNcQ2Bor5kuiNI2-HZn7Xq" alt="Details screen"/> 
+  <img src="https://drive.google.com/uc?id=1ddnpTgr6s_oNcQ2Bor5kuiNI2-HZn7Xq" width="400px" alt="Details screen"/> 
 </p>
 
 ### Changing of a view
