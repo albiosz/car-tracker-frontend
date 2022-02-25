@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Car tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a frontend of service which was created for a bachelor thesis. The whole service allows a user to track vehicles.
 
-## Available Scripts
+<p align="center">
+  <img src="https://drive.google.com/uc?id=10IMmolpQ4r1U04XHfmTZHQiao_gLDbiM" alt="Main screen"/> 
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
+## Main parts of the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Live location of vehicles
+User see live location of chosen vehicles.
+<p align="center">
+  <img src="https://drive.google.com/uc?id=16I7jyyj13eXGW3hluPcg3tT9gCcBJ4TQ" alt="Current position of vehicles"/> 
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### Panel of a vehicle
+User see details of a chosen vehicle by him/herself and have three actions: "Show history", "Follow" and "Show More".
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1svga4DifwVrp_4k3EYP7aY2yuYdpfKTN" alt="Panel of a vehicle"/> 
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### Show history
+User is able to see history of location of a vehicle. There are two types of history - long and short time history. 
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1m5f8-ivuS2cJYuLVOoGxCxjcFBmWnefK" alt="History panel"/> 
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Long time history can be chosen from interval and is displayed in a form of points.
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1jQf4OenLneygWSoh4vghUURdYlsWLFmZ" alt="History panel"/> 
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Short time history shows newest 35 locations points of a vehicle.
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1M59YzO0y6WD8gRvAO_51HxjZKc3ovezL" alt="History panel"/> 
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Follow
+Functionality which allow user to follow a chosen vehicle, what means that view will be centered on the vehicle every time there is an update of location.
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1_aPlp6ETJVH21bA4QLRddIN34EywL0pg" alt="Follow"/> 
+</p>
 
-### `npm run eject`
+#### Show More
+Another screen which shows more details of a chosen vehicle.
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1ddnpTgr6s_oNcQ2Bor5kuiNI2-HZn7Xq" alt="Details screen"/> 
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Changing of a view
+App react on actions of a user by changing view to relevant information according to taken action, e. g. when a user selects vehicles on a list, view change to show them all. 
+<p align="center">
+  <img src="https://drive.google.com/uc?id=1Ump4qBmqjS0EFRLIKva4etfAKRIjHlAP"/> 
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The aim of these actions is to make using of the app more pleasant.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Used technologies
+* Frontend library - React (https://reactjs.org/)
+* Central state - Redux (https://redux.js.org/)
+* UI framework - MUI (https://mui.com/)
+* Map - React Leaflet (https://react-leaflet.js.org/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to run a project?
 
-## Learn More
+0. Prerequisite - NodeJs 14.17.0 or higher
+1. Go to directory with the project.
+2. Install dependencies - `npm install`
+3. Run the app - `npm start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
