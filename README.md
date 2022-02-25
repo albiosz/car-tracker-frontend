@@ -57,7 +57,7 @@ App react on actions of a user by changing view to relevant information accordin
   <img src="https://drive.google.com/uc?id=1Ump4qBmqjS0EFRLIKva4etfAKRIjHlAP"/> 
 </p>
 
-The aim of these actions is to make using of the app more pleasant.
+The aim of these actions is to make it more pleasant to use the app.
 
 ## Used technologies
 * Frontend library - React (https://reactjs.org/)
@@ -68,8 +68,6 @@ The aim of these actions is to make using of the app more pleasant.
 ## How to run a project?
 
 0. Prerequisite - NodeJs 14.17.0 or higher
-1. Go to directory with the project.
+1. Go to the directory with the project.
 2. Install dependencies - `npm install`
 3. Run the app - `npm start`
-
-
