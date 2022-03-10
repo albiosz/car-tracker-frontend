@@ -1,0 +1,9 @@
+node_modules
+readme_img
+build
+Dockerfile
+.dockerignore
+.git
+Problems.md
+to_implement.txt
+README.md
